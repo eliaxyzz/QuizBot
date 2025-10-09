@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Domande</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+
+        <div class="topnav">
+            <div class="links">
+                <a class="active" href="/startpage">Homepage</a>
+                <a href="/domande/aggiungidom">Aggiungi</a>
+                <a href="/domande/modificadom">Modifica</a>
+                <a href="/domande/eliminadom">Elimina</a>
+            </div>
+            <div class="search-container">
+                <form action="/domande/cercadom" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1><%= testo %></h1>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Domanda</th>
+                </tr>
+                <% doms.forEach(function(rows){ %>
+                <tr>
+                    <td><%= rows.Id_Domanda %></td>
+                    <td><%= rows.Domanda %></td>
+                </tr>
+                <% }); %>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <%- include('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Aggiungi</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepage</a>
+            <a href="/risposte/modificarisp">Modifica</a>
+            <a href="/risposte/eliminarisp">Elimina</a>
+            <div class="search-container">
+                <form action="/risposte/cercarisp" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+<div class="content">
+            <div class="form-card">
+                <h1 class="form-title">Aggiungi una Risposta</h1>
+                <form action="/risposte/aggiungirisp" method="POST" class="form-container">
+                    <label for="risposta">Risposta</label>
+                    <input id="risposta" name="risposta" type="text" placeholder="Inserisci la risposta..." required>
+                    <label>Fk_Domanda</label>
+                <input class="txt" name="fk_domanda" type="number" placeholder="FK_Domanda">
+                 <label>Correttezza</label>
+            <input class="txt" name="correttezza" placeholder="Correttezza">
+                    <button type="submit" class="btn-submit">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

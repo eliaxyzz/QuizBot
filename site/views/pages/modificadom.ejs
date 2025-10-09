@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Online - Modifica</title>
+        <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+        <style>
+        /* Card form */
+.form-card {
+    background: white;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74,144,226,0.5);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #357ABD;
+    transform: scale(1.03);
+}
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <%- include ('../partials/header') %>
+            </header>
+            <div class="topnav">
+                <a class="active" href="/startpage">Homepage</a>
+                <a href="/domande/aggiungidom">Aggiungi</a>
+                <a href="/domande/eliminadom">Elimina</a>
+                <div class="search-container">
+                    <form action="/domande/cercadom" method="GET">
+                        <input type="text" placeholder="Cerca..." name="id">
+                        <button type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="form-card">
+                    <h1 class="form-title">Modifica una Domanda</h1>
+
+                    <form action="/domande/modificadom" method="POST"
+                        class="form-container">
+                        <label for="id">ID Domanda</label>
+                        <input id="id" name="id" type="number"
+                            placeholder="Inserisci l'ID" required>
+
+                        <label for="domanda">Nuova Domanda</label>
+                        <input id="domanda" name="domanda" type="text"
+                            placeholder="Inserisci la nuova domanda" required>
+
+                        <button type="submit" class="btn-edit">Modifica</button>
+                    </form>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <%- include ('../partials/footer') %>
+            </footer>
+        </div>
+    </body>
+
+</html>

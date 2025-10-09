@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - HomePage</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepage</a>
+            <a href="/utenti/aggiungiut">Aggiungi</a>
+            <a href="/utenti/modificaut">Modifica</a>
+            <a href="/utenti/eliminaut">Elimina</a>
+            <div class="search-container">
+                <form action="/utenti/cercaut" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <h1> <%= testo %> </h1>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+                <% users.forEach(function(rows){ %>
+                <tr>
+                    <td> <%= rows.Id_Utente %> </td>
+                    <td> <%= rows.Nome %> </td>
+                    <td> <%= rows.Cognome %> </td>
+                    <td> <%= rows.Username %> </td>
+                    <td> <%= rows.Password %> </td>
+                </tr>
+                <% }); %>
+
+            </table>
+        </div>
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

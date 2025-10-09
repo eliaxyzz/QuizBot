@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Elimina</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepage</a>
+            <a href="/utenti/aggiungiut">Aggiungi</a>
+            <a href="/utenti/modificaut">Modifica</a>
+            <a href="/utenti/startpage">StartPage</a>
+            <div class="search-container">
+                <form action="/utenti/cercaut" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+
+       <div class="content">
+    <div class="form-card">
+        <h1 class="form-title">Elimina un Utente</h1>
+        <form action="/utenti/eliminaut" method="POST" class="form-container">
+            <label for="id">ID Utente</label>
+            <input id="id" name="id" type="number" placeholder="Inserisci l'ID" required>
+
+            <button type="submit" class="btn-delete">Elimina</button>
+        </form>
+    </div>
+</div>
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

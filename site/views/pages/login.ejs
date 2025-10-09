@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Login</title>
+    <!-- CSS locale -->
+    <link rel="stylesheet" href="/site/public/CSS/style.css" type="text/css">
+    <!-- W3.CSS per semplicità -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+
+        <div class="content1">
+            <div class="login-card">
+                <h2>Login</h2>
+                <form action="/" method="POST">
+                    <p>
+                        <label>Username</label>
+                        <input class="txt1" name="username" type="text" placeholder="Username...">
+                    </p>
+                    <p>
+                        <label>Password</label>
+                        <input class="txt1" name="password" type="password" placeholder="Password...">
+                    </p>
+                    <button class="btnsign">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <%- include('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

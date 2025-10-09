@@ -1,0 +1,24 @@
+{
+  "name": "quizbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cli-table": "^0.3.11",
+    "colors": "^1.4.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "node-telegram-bot-api": "^0.66.0",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7",
+    "vorpal": "^1.12.0"
+  }
+}

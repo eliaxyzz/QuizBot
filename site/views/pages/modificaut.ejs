@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Modifica</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepage</a>
+            <a href="/utenti/aggiungiut">Aggiungi</a>
+            <a href="/utenti/eliminaut">Elimina</a>
+            <div class="search-container">
+                <form action="/utenti/cercaut" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+<div class="content">
+                <div class="form-card">
+                    <h1 class="form-title">Modifica un Utente</h1>
+
+                    <form action="/utenti/modificaut" method="POST"
+                        class="form-container">
+                        <label for="id">ID Utente</label>
+                        <input id="id" name="id" type="number"
+                            placeholder="Inserisci l'ID" required>
+                        <label>Nome</label>
+                    <input class="txt" name="nome" type="text" placeholder="Nome">
+                    <label>Cognome</label>
+                    <input class="txt" name="cognome" type="text" placeholder="Cognome">
+                    <label>Username</label>
+                    <input class="txt" name="username" type="text" placeholder="Username">
+                    <label>Password</label>
+                    <input class="txt" name="password" type="text" placeholder="Password">
+                            <button type="submit"
+                                class="btn-edit">Modifica</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

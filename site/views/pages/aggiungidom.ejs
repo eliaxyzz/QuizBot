@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Aggiungi Domanda</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+
+        <!-- Navbar -->
+        <div class="topnav">
+            <div class="links">
+                <a class="active" href="/startpage">Homepage</a>
+                <a href="/domande/modificadom">Modifica</a>
+                <a href="/domande/eliminadom">Elimina</a>
+            </div>
+            <div class="search-container">
+                <form action="/domande/cercadom" method="GET">
+                    <input type="text" placeholder="Cerca per ID..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contenuto -->
+        <div class="content">
+            <div class="form-card">
+                <h1 class="form-title">Aggiungi una Domanda</h1>
+                <form action="/domande/aggiungidom" method="POST" class="form-container">
+                    <label for="domanda">Domanda</label>
+                    <input id="domanda" name="domanda" type="text" placeholder="Inserisci la domanda..." required>
+
+                    <button type="submit" class="btn-submit">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - HomePage</title>
+    <link rel="stylesheet" href="/site/public/CSS/style.css" type="text/css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include('../partials/header') %>
+        </header>
+
+        <div class="topnavstart">
+            <a href="/domande">Domande</a>
+            <a href="/risposte">Risposte</a>
+            <a href="/utenti">Utenti</a>
+            <a href="/">Logout</a>
+        </div>
+
+        <div class="content2">
+            <img src="/img/quiz.jpg" alt="Quiz Banner">
+        </div>
+
+        <footer class="footer">
+            <%- include('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

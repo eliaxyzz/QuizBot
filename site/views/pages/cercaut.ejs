@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Cerca</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepage</a>
+            <a href="/utenti/modificaut">Modifica</a>
+            <a href="/utenti/eliminaut">Elimina</a>
+        </div>
+        <div class="content">
+            <h1> <%= testo %> </h1>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+                <tr>
+                    <td> <%= cercaEl.Id_Utente %> </td>
+                    <td> <%= cercaEl.Nome %> </td>
+                    <td> <%= cercaEl.Cognome %> </td>
+                    <td> <%= cercaEl.Username %> </td>
+                    <td> <%= cercaEl.Password %> </td>
+                </tr>
+            </table>
+        </div>
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

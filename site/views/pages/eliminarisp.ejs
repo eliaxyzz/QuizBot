@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online - Elimina</title>
+    <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include ('../partials/header') %>
+        </header>
+        <div class="topnav">
+            <a class="active" href="/startpage">Homepge</a>
+            <a href="/risposte/aggiungirisp">Aggiungi</a>
+            <a href="/risposte/modificarisp">Modifica</a>
+            <div class="search-container">
+                <form action="/risposte/cercarisp" method="GET">
+                    <input type="text" placeholder="Cerca..." name="id">
+                    <button type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+        <div class="form-card">
+        <h1 class="form-title">Elimina una Risposta</h1>
+        <form action="/risposte/eliminarisp" method="POST" class="form-container">
+            <label for="id">ID Risposta</label>
+            <input id="id" name="id" type="number" placeholder="Inserisci l'ID" required>
+
+            <button type="submit" class="btn-delete">Elimina</button>
+        </form>
+    </div>
+        <footer class="footer">
+            <%- include ('../partials/footer') %>
+        </footer>
+    </div>
+</body>
+
+</html>

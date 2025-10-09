@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Online - Modifica</title>
+        <link rel="stylesheet" href="/CSS/style.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <%- include ('../partials/header') %>
+            </header>
+            <div class="topnav">
+                <a class="active" href="/startpage">Homepage</a>
+                <a href="/risposte/aggiungirisp">Aggiungi</a>
+                <a href="/risposte/eliminarisp">Elimina</a>
+                <div class="search-container">
+                    <form action="/risposte/cercarisp" method="GET">
+                        <input type="text" placeholder="Cerca..." name="id">
+                        <button type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+            <div class="content">
+                <div class="form-card">
+                    <h1 class="form-title">Modifica una Risposta</h1>
+
+                    <form action="/risposte/modificarisp" method="POST"
+                        class="form-container">
+                        <label for="id">ID Risposta</label>
+                        <input id="id" name="id" type="number"
+                            placeholder="Inserisci l'ID" required>
+
+                        <label for="domanda">Nuova Risposta</label>
+                        <input id="risposta" name="risposta" type="text"
+                            placeholder="Inserisci la nuova risposta" required>
+                        <label>Fk_Domanda</label>
+                        <input class="txt" name="fk_domanda" type="number"
+                            placeholder="Fk_Domanda">
+                        <p>
+                            <label>Correttezza</label>
+                            <input class="txt" name="correttezza" type="text"
+                                placeholder="Correttezza">
+
+                            <button type="submit"
+                                class="btn-edit">Modifica</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <%- include ('../partials/footer') %>
+            </footer>
+        </div>
+    </body>
+
+</html>
