@@ -8,7 +8,7 @@
 
 ### Bot Telegram
 - Registrazione e login degli utenti con `/signup` e `/login`.
-- Quiz interattivi con **5 domande casuali**, senza ripetizioni.
+- Quiz interattivi con **5 domande casuali**.
 - Inline keyboard per le risposte multiple.
 - Visualizzazione del punteggio finale.
 - Comandi principali:
